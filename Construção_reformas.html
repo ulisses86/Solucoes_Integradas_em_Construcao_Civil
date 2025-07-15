@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construções Técnicas - Soluções Integradas em Construção Civil</title>
+    <meta name="description" content="Especialistas em projetos elétricos, restauração de fachadas e pisos em Recife. Orçamentos personalizados e gestão de obras com técnicos credenciados.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-btn {
+            background: linear-gradient(45deg, #2A5BAA, #FF6B00);
+        }
+        .gradient-btn:hover {
+            background: linear-gradient(45deg, #FF6B00, #2A5BAA);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .floating-cta {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .cad-image {
+            filter: brightness(0.9) contrast(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Floating CTA -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#contact" class="floating-cta bg-gradient-to-r from-blue-700 to-orange-500 text-white px-6 py-3 rounded-full shadow-lg font-semibold flex items-center">
+            <i class="fas fa-phone-alt mr-2"></i> Orçamento Grátis
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-hard-hat text-orange-500 text-2xl mr-2"></i>
+                <span class="font-bold text-xl">Construções Técnicas</span>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-orange-500 transition">Início</a>
+                <a href="#about" class="hover:text-orange-500 transition">Sobre Nós</a>
+                <a href="#services" class="hover:text-orange-500 transition">Serviços</a>
+                <a href="#ebook" class="hover:text-orange-500 transition">E-book</a>
+                <a href="#contact" class="hover:text-orange-500 transition">Contato</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-orange-500 transition">Início</a>
+            <a href="#about" class="block py-2 hover:text-orange-500 transition">Sobre Nós</a>
+            <a href="#services" class="block py-2 hover:text-orange-500 transition">Serviços</a>
+            <a href="#ebook" class="block py-2 hover:text-orange-500 transition">E-book</a>
+            <a href="#contact" class="block py-2 hover:text-orange-500 transition">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Imagem CAD corrigida -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://i.postimg.cc/2StZPqQB/imagem-2025-07-14-213634037.png');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 z-10 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Soluções Integradas em Construção Civil</h1>
+            <p class="text-xl md:text-2xl mb-8">Projetos, Obras e Reformas com Excelência Técnica</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="gradient-btn text-white px-8 py-3 rounded-full font-semibold transition duration-300">Fale Conosco</a>
+                <a href="#services" class="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Expertise Reconhecida</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://i.postimg.cc/KjbLJdnq/03-6.jpg" alt="Técnicos de construção" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Formados em <strong class="text-blue-700">Técnico de Edificações</strong> e <strong class="text-blue-700">Técnico de Administração</strong>, combinamos conhecimento técnico e gestão eficiente. Nossa equipe é especializada em diversas áreas da construção civil, garantindo qualidade e profissionalismo em cada projeto.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Atuamos com projetos elétricos, restauração de fachadas, pisos, forro de PVC e gestão total de obras. Cada projeto é tratado com atenção individualizada, garantindo que todas as necessidades dos nossos clientes sejam atendidas com excelência.
+                    </p>
+                    <div class="bg-gray-100 p-6 rounded-lg border-l-4 border-orange-500">
+                        <p class="italic text-gray-700">
+                            "Nossa missão é transformar ideias em realidade, com qualidade técnica, segurança e dentro dos prazos estabelecidos."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Soluções completas para sua obra ou reforma</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Projetos Residenciais</h3>
+                    <p class="text-gray-600">Desenvolvimento completo de projetos residenciais, desde a concepção até a aprovação em órgãos competentes.</p>
+                </div>
+                <!-- Service 2 (alterado) -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Orçamentos Detalhados</h3>
+                    <p class="text-gray-600">Elaboração de orçamentos transparentes e personalizados para cada tipo de projeto.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Projetos Elétricos</h3>
+                    <p class="text-gray-600">Soluções em instalações elétricas residenciais e comerciais de pequeno porte, com segurança e eficiência energética.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Restauração de Fachadas</h3>
+                    <p class="text-gray-600">Recuperação e revitalização de fachadas de edifícios, preservando características arquitetônicas.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pisos e Revestimentos</h3>
+                    <p class="text-gray-600">Instalação de pisos cerâmicos, porcelanatos e epóxi com acabamento profissional e durável.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Obras em Geral</h3>
+                    <p class="text-gray-600">Execução de obras residenciais e comerciais de pequeno porte com acompanhamento técnico especializado.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-blue-700 text-4xl mb-4">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Piscinas</h3>
+                    <p class="text-gray-600">Revitalização de piscinas, trocas de pastilhas e juntas, manutenção preventiva e corretiva e decks completos.</p>
+                </div>              
+            </div>
+        </div>
+    </section>
+
+    <!-- E-book Section -->
+    <section id="ebook" class="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full mb-4 text-sm font-semibold">
+                    LANÇAMENTO EXCLUSIVO
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">E-book "Domine Sua Rede Elétrica Residencial"</h2>
+                <p class="text-xl mb-8">Aprenda tudo sobre instalações elétricas seguras e eficientes em sua casa. Guia completo para proprietários e interessados.</p>
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg border border-white border-opacity-20 mb-8">
+                    <h3 class="text-2xl font-bold mb-4">EM BREVE</h3>
+                    <p class="mb-6">Cadastre-se para ser avisado sobre o lançamento e receber conteúdo exclusivo!</p>
+                    <form class="max-w-md mx-auto">
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <input type="email" placeholder="Seu melhor e-mail" class="flex-grow px-4 py-3 rounded text-gray-900 focus:outline-none">
+                            <button type="submit" class="gradient-btn text-white px-6 py-3 rounded font-semibold transition duration-300">
+                                Avise-me
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section - Imagens corrigidas -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Técnicos Responsáveis</h2>
+                <p class="text-xl text-gray-600">Profissionais qualificados e comprometidos com seu projeto</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500">
+                            <img src="https://i.postimg.cc/ZqLd7f5V/ulisses.jpg" alt="Ulisses Jr" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Ulisses Jr</h3>
+                            <p class="text-blue-700">Téc. Edificações | Téc. Administração</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope text-orange-500 mr-2"></i>
+                            <a href="mailto:ulisses86@outlook.com" class="hover:text-blue-700 transition">ulisses86@outlook.com</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt text-orange-500 mr-2"></i>
+                            <a href="tel:+5581989825613" class="hover:text-blue-700 transition">(81) 98982-5613</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fab fa-instagram text-orange-500 mr-2"></i>
+                            <a href="https://instagram.com/ulisses__junior" target="_blank" class="hover:text-blue-700 transition">@ulisses__junior</a>
+                        </p>
+                        <!-- WhatsApp Link -->
+                        <p class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-500 mr-2"></i>
+                            <a href="https://wa.me/5581989825613" target="_blank" class="hover:text-blue-700 transition">WhatsApp</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500">
+                            <img src="https://i.postimg.cc/CxkDDMTy/diego.jpg" alt="Diego Rocha" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Diego Rocha</h3>
+                            <p class="text-blue-700">Téc. Edificações</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt text-orange-500 mr-2"></i>
+                            <a href="tel:+5581998068871" class="hover:text-blue-700 transition">(81) 99806-8871</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fab fa-instagram text-orange-500 mr-2"></i>
+                            <a href="https://instagram.com/diegooxz_" target="_blank" class="hover:text-blue-700 transition">@diegooxz_</a>
+                        </p>
+                        <!-- WhatsApp Link -->
+                        <p class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-500 mr-2"></i>
+                            <a href="https://wa.me/5581998068871" target="_blank" class="hover:text-blue-700 transition">WhatsApp</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row items-center gap-6 mb-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-orange-500">
+                            <img src="https://i.postimg.cc/N0tXxhBK/jo-o.jpg" alt="João Carlos" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">João Carlos</h3>
+                            <p class="text-blue-700">Téc. Edificações</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt text-orange-500 mr-2"></i>
+                            <a href="tel:+5581988838228" class="hover:text-blue-700 transition">(81) 98838-2288</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fab fa-instagram text-orange-500 mr-2"></i>
+                            <a href="https://instagram.com/joao_carlos_guerra" target="_blank" class="hover:text-blue-700 transition">@joao_carlos_guerra</a>
+                        </p>
+                        <!-- WhatsApp Link -->
+                        <p class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-500 mr-2"></i>
+                            <a href="https://wa.me/5581988838228" target="_blank" class="hover:text-blue-700 transition">WhatsApp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Depoimentos</h2>
+                <p class="text-xl text-gray-600">O que nossos clientes dizem sobre nosso trabalho</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Contratei para o projeto elétrico da minha residência e fiquei muito satisfeito com o resultado. Atendimento profissional e técnicos muito competentes."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://i.postimg.cc/L6fwqfXm/Gilberto.jpg" alt="Gilberto de Andrade" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Gilberto de Andrade</h4>
+                            <p class="text-sm text-gray-600">Rua Luciano Melo - Olinda - PE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+                <p class="text-xl text-gray-300">Solicite um orçamento ou tire suas dúvidas</p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-orange-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Localização</h4>
+                                <p class="text-gray-300">Recife, PE - Brasil</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-orange-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Telefones</h4>
+                                <p class="text-gray-300">
+                                    <a href="tel:+5581989825613" class="hover:text-orange-500 transition">(81) 98982-5613 - Ulisses</a>
+                                </p>
+                                <p class="text-gray-300">
+                                    <a href="tel:+5581998068871" class="hover:text-orange-500 transition">(81) 99806-8871 - Diego</a>
+                                </p>
+                                <p class="text-gray-300">
+                                    <a href="tel:+5581988838228" class="hover:text-orange-500 transition">(81) 98838-2288 - João Carlos</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-orange-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">E-mail</h4>
+                                <p class="text-gray-300">ulisses86@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-orange-500 text-xl mr-4 mt-1">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">WhatsApp</h4>
+                                <p class="text-gray-300">
+                                    <a href="https://wa.me/5581989825613" target="_blank" class="hover:text-orange-500 transition">Ulisses</a>
+                                </p>
+                                <p class="text-gray-300">
+                                    <a href="https://wa.me/5581998068871" target="_blank" class="hover:text-orange-500 transition">Diego</a>
+                                </p>
+                                <p class="text-gray-300">
+                                    <a href="https://wa.me/5581988838228" target="_blank" class="hover:text-orange-500 transition">João Carlos</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Nos siga nas redes sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://instagram.com/ulisses__junior" target="_blank" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://instagram.com/diegooxz_" target="_blank" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://instagram.com/joao_carlos_guerra" target="_blank" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Envie uma Mensagem</h3>
+                    <form action="https://formsubmit.co/ulisses86@outlook.com" method="POST" class="space-y-4">
+                        <!-- Impede spam -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Redireciona para uma página de obrigado (opcional) -->
+                        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+
+                        <div>
+                            <label for="name" class="block mb-1">Seu Nome</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Seu E-mail</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-1">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-1">Serviço de Interesse</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="">Selecione um serviço</option>
+                                <option value="projetos">Projetos Residenciais</option>
+                                <option value="eletrico">Projetos Elétricos</option>
+                                <option value="fachadas">Restauração de Fachadas</option>
+                                <option value="pisos">Pisos e Revestimentos</option>
+                                <option value="obras">Obras em Geral</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="gradient-btn text-white px-8 py-3 rounded font-semibold w-full transition duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-hard-hat text-orange-500 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">Construções Técnicas</span>
+                    </div>
+                    <p class="text-sm">Precisão técnica, resultado excepcional</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://instagram.com/ulisses__junior" class="hover:text-orange-500 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/diegooxz_" class="hover:text-orange-500 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/joao_carlos_guerra" class="hover:text-orange-500 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm">© 2025 Construções Técnicas. Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+                <p>Registro no CFT-PE: 123456/PE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // E-book form submission
+        const ebookForm = document.querySelector('#ebook form');
+        if (ebookForm) {
+            ebookForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                if (emailInput.value) {
+                    alert('Obrigado pelo seu interesse! Você será notificado quando o e-book for lançado.');
+                    emailInput.value = '';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
