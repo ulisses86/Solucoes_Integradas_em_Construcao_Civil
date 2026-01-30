@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#0f172a', secondary: '#3b82f6' } } } }
+    </script>
+</head>
+<body class="bg-slate-50">
+    <header class="bg-primary text-white py-4 px-6 no-print">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-black uppercase tracking-tight">SL CONSTRUÇÃO CIVIL</h1>
+                <p class="text-slate-300 text-sm">Sistema Integrado de Orçamentos</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="voltarPagina()" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>Voltar
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex items-center justify-center" style="min-height: 70vh;">
+                <div class="text-center p-8 bg-white rounded-2xl shadow-xl border border-slate-200 max-w-lg">
+                    <div class="w-24 h-24 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-home text-4xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-800 uppercase">Coberturas</h2>
+                    <p class="text-slate-500 mt-4 italic">Módulo para cálculo de madeiramento, telhas cerâmicas e metálicas em fase de planejamento.</p>
+                    <div class="mt-8 px-6 py-2 bg-slate-100 text-slate-500 rounded-full font-bold text-sm inline-block">
+                        <i class="fas fa-list-check mr-2"></i> EM PLANEJAMENTO
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+        <script>
+        function voltarPagina() {
+            // Se houver histórico no navegador, ele volta
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // Caso contrário, ele redireciona para a sua página principal
+                // Altere 'index.html' para o nome do seu arquivo principal
+                window.location.href = 'orcamento.html'; 
+            }
+        }
+    </script>
+</body>
+</html>

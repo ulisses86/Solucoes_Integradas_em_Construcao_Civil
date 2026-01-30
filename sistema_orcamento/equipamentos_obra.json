@@ -1,0 +1,148 @@
+{
+  "equipamentos_obra": [
+    {
+      "id": 1,
+      "categoria": "Ferramentas Elétricas",
+      "nome": "Parafusadeira / Aparafusadora",
+      "especificacao": "Bateria 18V com controle de torque"
+    },
+    {
+      "id": 2,
+      "categoria": "Demolição",
+      "nome": "Martelete Perfurador/Rompedor 5kg",
+      "especificacao": "Encaixe SDS Plus"
+    },
+    {
+      "id": 3,
+      "categoria": "Demolição",
+      "nome": "Martelete Rompedor 10kg",
+      "especificacao": "Encaixe SDS Max"
+    },
+    {
+      "id": 4,
+      "categoria": "Demolição",
+      "nome": "Martelete Rompedor 20kg",
+      "especificacao": "Sextavado 28mm para demolição pesada"
+    },
+    {
+      "id": 5,
+      "categoria": "Acesso e Altura",
+      "nome": "Andaime Tubular (Painel)",
+      "especificacao": "Dimensões 1.0m x 1.0m ou 1.5m x 1.0m"
+    },
+    {
+      "id": 6,
+      "categoria": "Acesso e Altura",
+      "nome": "Prancha para Andaime",
+      "especificacao": "Piso metálico antiderrapante"
+    },
+    {
+      "id": 7,
+      "categoria": "Estrutural",
+      "nome": "Escoramento Metálico",
+      "especificacao": "Postica extensível para laje/viga"
+    },
+    {
+      "id": 8,
+      "categoria": "Concretagem",
+      "nome": "Betoneira 400 Litros",
+      "especificacao": "Uso profissional padrão"
+    },
+    {
+      "id": 15,
+      "categoria": "Concretagem",
+      "nome": "Betoneira 600 Litros",
+      "especificacao": "Alta capacidade, motor trifásico ou monofásico potente"
+    },
+    {
+      "id": 9,
+      "categoria": "Compactação",
+      "nome": "Compactador de Solo (Sapo)",
+      "especificacao": "Motor a gasolina para solos granulares"
+    },
+    {
+      "id": 10,
+      "categoria": "Compactação",
+      "nome": "Placa Vibratória",
+      "especificacao": "Ideal para asfalto e paver"
+    },
+    {
+      "id": 11,
+      "categoria": "Corte e Acabamento",
+      "nome": "Serra Meia Esquadria",
+      "especificacao": "Para cortes precisos em madeira ou alumínio"
+    },
+    {
+      "id": 12,
+      "categoria": "Corte e Acabamento",
+      "nome": "Lixadeira Angular",
+      "especificacao": "Disco de 7 ou 9 polegadas"
+    },
+    {
+      "id": 17,
+      "categoria": "Corte e Acabamento",
+      "nome": "Serra Mármore (Tipo Makita)",
+      "especificacao": "Disco diamantado de 4.3/8 polegadas"
+    },
+    {
+      "id": 18,
+      "categoria": "Corte e Acabamento",
+      "nome": "Serra Circular",
+      "especificacao": "Para cortes retos em madeira, disco de 7.1/4 polegadas"
+    },
+    {
+      "id": 13,
+      "categoria": "Corte e Acabamento",
+      "nome": "Cortador de Piso Intertravado",
+      "especificacao": "Manual por pressão ou guilhotina"
+    },
+    {
+      "id": 14,
+      "categoria": "Corte e Acabamento",
+      "nome": "Cortadora de Piso/Asfalto",
+      "especificacao": "Motor a gasolina, disco de 14 polegadas"
+    },
+    {
+      "id": 16,
+      "categoria": "Bombagem e Drenagem",
+      "nome": "Bomba de Sucção Submersível",
+      "especificacao": "Para água suja com partículas sólidas, motor elétrico"
+    },
+    {
+      "id": 19,
+      "categoria": "Ferramentas Elétricas",
+      "nome": "Furadeira de Impacto / Berbequim",
+      "especificacao": "Uso profissional, mandril de 1/2 polegada"
+    },
+    {
+      "id": 20,
+      "categoria": "Energia",
+      "nome": "Gerador de Energia",
+      "especificacao": "Gasolina, 5kVA a 8kVA para suporte de ferramentas"
+    },
+    {
+      "id": 21,
+      "categoria": "Medição",
+      "nome": "Nível a Laser",
+      "especificacao": "Autonivelante com tripé, feixe verde ou vermelho"
+    },
+    {
+      "id": 22,
+      "categoria": "Limpeza e Jato",
+      "nome": "Lavadora de Alta Pressão",
+      "especificacao": "Industrial, ideal para limpeza de fachadas e pós-obra"
+    },
+    {
+      "id": 23,
+      "categoria": "Carga",
+      "nome": "Guincho de Coluna",
+      "especificacao": "Capacidade de 200kg a 400kg para elevação de materiais"
+    },
+    {
+      "id": 24,
+      "categoria": "Ar Comprimido",
+      "nome": "Compressor de Ar",
+      "especificacao": "Tanque de 50L a 100L para pintura e ferramentas pneumáticas"
+    }
+  ]
+}

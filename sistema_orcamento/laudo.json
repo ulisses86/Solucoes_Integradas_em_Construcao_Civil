@@ -1,0 +1,152 @@
+{
+  "categorias": [
+    {
+      "nome": "Alvenaria e Vedação",
+      "descricao": "Manifestações patológicas em paredes de vedação e elementos de fechamento vertical.",
+      "patologias": [
+        {
+          "id_num": 1,
+          "id": "fissura_horizontal_encunhamento",
+          "nome": "Fissura por falha de encunhamento",
+          "nivel_complexidade": "medio",
+          "observacao": "Surgimento comum na interface entre a última fiada e a viga; pode indicar falha de encunhamento ou movimentação diferencial, devendo-se observar se há evolução da fissura."
+        },
+        {
+          "id_num": 2,
+          "id": "fissura_mapeada_retracao",
+          "nome": "Fissuras mapeadas por retração térmica ou higroscópica",
+          "nivel_complexidade": "baixo",
+          "observacao": "Aspecto semelhante a teia de aranha; geralmente associada à retração da argamassa, dosagem inadequada ou cura insuficiente."
+        },
+        {
+          "id_num": 3,
+          "id": "fissura_inclinada_esquadria",
+          "nome": "Fissura diagonal em cantos de esquadrias",
+          "nivel_complexidade": "medio",
+          "observacao": "Pode indicar ausência ou dimensionamento inadequado de vergas e contravergas, concentrando tensões nos vãos."
+        }
+      ]
+    },
+    {
+      "nome": "Impermeabilização e Umidade",
+      "descricao": "Problemas relacionados à penetração, infiltração ou ascensão de água na edificação.",
+      "patologias": [
+        {
+          "id_num": 4,
+          "id": "umidade_ascendente_capilaridade",
+          "nome": "Umidade ascendente por capilaridade",
+          "nivel_complexidade": "medio",
+          "observacao": "Manifesta-se por manchas, descascamentos e deterioração na base das paredes; pode estar relacionada à ausência ou falha na impermeabilização do baldrame."
+        },
+        {
+          "id_num": 5,
+          "id": "infiltracao_por_rejunte",
+          "nome": "Infiltração por falha no rejuntamento",
+          "nivel_complexidade": "baixo",
+          "observacao": "Comum em banheiros, cozinhas e áreas externas; permite passagem de água para camadas inferiores, podendo causar manchas e umidade."
+        },
+        {
+          "id_num": 6,
+          "id": "mancha_umidade_teto_laje",
+          "nome": "Infiltração em laje de cobertura",
+          "nivel_complexidade": "medio",
+          "observacao": "Pode ter origem em fissuras na laje, falhas na impermeabilização ou deficiência nos sistemas de drenagem superficial."
+        }
+      ]
+    },
+    {
+      "nome": "Revestimentos e Pisos",
+      "descricao": "Falhas em revestimentos cerâmicos, argamassas e pisos assentados.",
+      "patologias": [
+        {
+          "id_num": 7,
+          "id": "desplacamento_ceramico_parede",
+          "nome": "Desplacamento de revestimento cerâmico em paredes",
+          "nivel_complexidade": "medio",
+          "observacao": "Caracteriza-se pelo desprendimento das peças; pode estar associado a falha de aderência, tardoz sujo, argamassa inadequada ou ausência de juntas."
+        },
+        {
+          "id_num": 8,
+          "id": "eflorescencia_revestimento",
+          "nome": "Eflorescência em revestimentos",
+          "nivel_complexidade": "baixo",
+          "observacao": "Presença de depósitos esbranquiçados superficiais; indica migração de sais solúveis transportados pela água através dos materiais."
+        },
+        {
+          "id_num": 9,
+          "id": "som_cavo_piso",
+          "nome": "Descolamento de piso cerâmico (som cavo)",
+          "nivel_complexidade": "baixo",
+          "observacao": "Identificado por percussão simples; pode evoluir para quebra das peças sob tráfego ou uso contínuo."
+        }
+      ]
+    },
+    {
+      "nome": "Pintura e Acabamento",
+      "descricao": "Patologias associadas a pinturas, massas e acabamentos superficiais.",
+      "patologias": [
+        {
+          "id_num": 10,
+          "id": "bolhas_pintura_umidade",
+          "nome": "Formação de bolhas na pintura (empolamento)",
+          "nivel_complexidade": "baixo",
+          "observacao": "Geralmente relacionada à presença de umidade no substrato, aplicação inadequada ou preparo insuficiente da superfície."
+        },
+        {
+          "id_num": 11,
+          "id": "descascamento_pelicula_tinta",
+          "nome": "Descascamento de pintura",
+          "nivel_complexidade": "baixo",
+          "observacao": "Perda de aderência da película de tinta; pode ocorrer entre demãos ou entre a tinta e o substrato."
+        },
+        {
+          "id_num": 12,
+          "id": "mofo_bolor_condensacao",
+          "nome": "Proliferação de mofo e bolor",
+          "nivel_complexidade": "baixo",
+          "observacao": "Comum em ambientes com ventilação insuficiente e elevada umidade relativa, favorecendo o crescimento de fungos."
+        }
+      ]
+    },
+    {
+      "nome": "Coberturas e Telhados",
+      "descricao": "Elementos de proteção superior e sistemas de escoamento pluvial.",
+      "patologias": [
+        {
+          "id_num": 13,
+          "id": "vazamento_rufo_contrarufo",
+          "nome": "Infiltração em rufos, contrarufos e calhas",
+          "nivel_complexidade": "medio",
+          "observacao": "Pode ocorrer em pontos de fixação, emendas ou falhas de selagem, permitindo entrada de água da chuva."
+        },
+        {
+          "id_num": 14,
+          "id": "telha_quebrada_deslocada",
+          "nome": "Deslocamento ou quebra de telhas",
+          "nivel_complexidade": "baixo",
+          "observacao": "Gera goteiras pontuais; pode ser causado por ventos fortes, impacto ou manutenção inadequada."
+        }
+      ]
+    },
+    {
+      "nome": "Instalações e Elementos Metálicos",
+      "descricao": "Manifestações em instalações aparentes e componentes metálicos visíveis.",
+      "patologias": [
+        {
+          "id_num": 15,
+          "id": "oxidacao_armadura_exposta",
+          "nome": "Corrosão inicial de armadura",
+          "nivel_complexidade": "medio",
+          "observacao": "Identificada por manchas de ferrugem ou armadura aparente; recomenda-se avaliação técnica antes da intervenção."
+        },
+        {
+          "id_num": 16,
+          "id": "vazamento_conexao_hidraulica",
+          "nome": "Vazamento em conexões hidráulicas aparentes",
+          "nivel_complexidade": "baixo",
+          "observacao": "Perceptível por gotejamento ou umidade persistente em torno de registros, conexões ou torneiras."
+        }
+      ]
+    }
+  ]
+}

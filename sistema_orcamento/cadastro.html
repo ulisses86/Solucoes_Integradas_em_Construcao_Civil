@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativar Acesso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div id="loading" class="text-center">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto mb-4"></div>
+        <p class="text-gray-500">Validando convite...</p>
+    </div>
+
+    <div id="telaCadastro" class="hidden bg-white p-8 rounded-xl shadow-xl max-w-md w-full">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Criar sua Senha</h2>
+        
+        <form id="formCadastro" class="space-y-4">
+            <input type="text" id="nome" placeholder="Seu Nome" required class="w-full p-3 border rounded-lg">
+            <input type="email" id="email" placeholder="Seu Email" required class="w-full p-3 border rounded-lg">
+            <input type="password" id="senha" placeholder="Crie uma Senha" required minlength="6" class="w-full p-3 border rounded-lg">
+            
+            <button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg hover:bg-amber-700 transition">
+                Ativar Sistema
+            </button>
+        </form>
+        <p id="msg" class="text-center text-sm mt-4 text-red-600 hidden"></p>
+    </div>
+
+    <div id="telaErro" class="hidden text-center max-w-md">
+        <div class="text-red-500 mb-4 mx-auto"><i data-feather="x-circle" class="w-16 h-16 mx-auto"></i></div>
+        <h2 class="text-xl font-bold text-gray-800">Convite Inválido</h2>
+        <p id="erroTxt" class="text-gray-600 mt-2">Este link expirou ou já foi usado.</p>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        feather.replace();
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token');
+
+        // 1. Validação Automática ao Abrir
+        async function validar() {
+            if (!token) return mostrarErro("Link incompleto.");
+
+            const { data, error } = await sbClient
+                .from('convites')
+                .select('*')
+                .eq('token', token)
+                .single();
+
+            if (error || !data) return mostrarErro("Convite não encontrado.");
+            if (data.usado) return mostrarErro("Este convite já foi utilizado.");
+            if (new Date() > new Date(data.expira_em)) return mostrarErro("O tempo limite do convite acabou.");
+
+            // Se passou tudo, mostra o formulário
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('telaCadastro').classList.remove('hidden');
+        }
+
+        function mostrarErro(txt) {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('telaErro').classList.remove('hidden');
+            document.getElementById('erroTxt').innerText = txt;
+        }
+
+        // 2. Envio do Formulário
+        document.getElementById('formCadastro').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const msg = document.getElementById('msg');
+            
+            btn.innerText = "Ativando...";
+            btn.disabled = true;
+
+            try {
+                // Cria usuário
+                await Auth.criarConta(
+                    document.getElementById('email').value,
+                    document.getElementById('senha').value,
+                    document.getElementById('nome').value
+                );
+
+                // Queima o token (marca como usado)
+                await sbClient.from('convites').update({ usado: true }).eq('token', token);
+
+                alert("Conta criada com sucesso!");
+                window.location.href = "orcamento.html"; // Manda pro sistema
+
+            } catch (err) {
+                msg.innerText = "Erro: " + err.message;
+                msg.classList.remove('hidden');
+                btn.innerText = "Tentar Novamente";
+                btn.disabled = false;
+            }
+        });
+
+        validar();
+    </script>
+</body>
+</html>

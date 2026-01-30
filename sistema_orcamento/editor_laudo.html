@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>SL Construção Civil | Gerador de Laudos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Incluir Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0f172a',
+            'secondary': '#2563eb',
+            'accent': '#7c3aed',
+            'success': '#10b981',
+            'warning': '#f59e0b',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #334155;
+      --success: #10b981;
+      --warning: #f59e0b;
+    }
+
+    * { box-sizing: border-box; outline: none; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
+
+    /* CARDS */
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* INPUTS MAGICOS */
+    .input-group { margin-bottom: 1.5rem; }
+    .input-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .magic-box {
+      background: #eff6ff;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px dashed #bfdbfe;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    
+    textarea { resize: vertical; min-height: 80px; }
+
+    /* BOTÕES */
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+    }
+    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-magic {
+      background: var(--accent);
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .btn-success { background: var(--success); width: 100%; justify-content: center; font-size: 1.1rem; padding: 16px; }
+    .btn-warning { background: var(--warning); }
+    .btn-sm { padding: 6px 12px; font-size: 0.85rem; }
+
+    /* RECOMENDAÇÕES */
+    .recomendacao-container {
+      margin-top: 1.5rem;
+    }
+    
+    .solucao-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    
+    .solucao-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    
+    .solucao-titulo {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+    
+    .solucao-descricao {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
+    
+    .materiais-lista {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed #cbd5e1;
+    }
+    
+    .materiais-lista h4 {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    
+    .materiais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 8px;
+    }
+    
+    .material-item {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .material-item input[type="checkbox"] {
+      width: auto;
+    }
+    
+    .material-item label {
+      flex-grow: 1;
+      cursor: pointer;
+    }
+    
+    .material-personalizado {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    
+    .material-personalizado input {
+      flex-grow: 1;
+      padding: 8px;
+    }
+    
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* RESULTADO GERADO */
+    .result-area {
+      margin-top: 1rem;
+      position: relative;
+    }
+    .result-area label { color: var(--success); }
+    .result-area textarea {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #064e3b;
+      font-weight: 500;
+    }
+
+    /* CHECKLIST SIMPLIFICADO */
+    .checklist-item {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr 30px;
+      gap: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    
+    /* CONTROLES DE RECOMENDAÇÃO */
+    .controles-recomendacao {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    /* MODO IMPRESSÃO (O LAUDO FINAL) - MARGENS OTIMIZADAS */
+    #printable-laudo { 
+      display: none; 
+      font-family: 'Times New Roman', Times, serif !important;
+    }
+
+    @media print {
+      body * { 
+        visibility: hidden; 
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      #printable-laudo, #printable-laudo * { 
+        visibility: visible; 
+        font-family: 'Times New Roman', Times, serif !important;
+      }
+      
+      #printable-laudo {
+        display: block !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: white !important;
+        color: black !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      
+      .no-print, .editor-mode { 
+        display: none !important; 
+      }
+      
+      /* REMOVER ELEMENTOS DESNECESSÁRIOS NA IMPRESSÃO */
+      .btn, .magic-box, .result-area label, .remove-btn,
+      .material-personalizado, .editar-descricao {
+        display: none !important;
+      }
+      
+      /* GARANTIR QUE NÃO HAJA QUEBRAS DE PÁGINA DESNECESSÁRIAS */
+      .solucao-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      
+      .laudo-section {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+    }
+
+    /* ESTILOS DO LAUDO FINAL (VISUAL A4 OTIMIZADO) */
+    .a4-page {
+      width: 21cm !important;
+      min-height: 29.7cm !important;
+      margin: 0 auto !important;
+      background: white !important;
+      padding: 1cm 1.5cm !important; /* MARGENS REDUZIDAS: 1cm top/bottom, 1.5cm left/right */
+      box-sizing: border-box !important;
+      position: relative !important;
+      font-family: 'Times New Roman', Times, serif !important;
+      line-height: 1.4 !important;
+    }
+    
+    .laudo-header { 
+      text-align: center; 
+      border-bottom: 2px solid #000; 
+      padding-bottom: 12px !important; 
+      margin-bottom: 20px !important;
+    }
+    
+    .laudo-title { 
+      font-size: 16pt !important; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      margin-bottom: 5px !important;
+      letter-spacing: 1px;
+    }
+    
+    .laudo-section { 
+      margin-bottom: 18px !important;
+      page-break-inside: avoid !important;
+    }
+    
+    .laudo-section h3 { 
+      background: #f0f0f0 !important; 
+      padding: 6px 10px !important; 
+      font-size: 12pt !important; 
+      text-transform: uppercase; 
+      border-left: 4px solid #000 !important;
+      margin: 12px 0 8px 0 !important;
+      page-break-after: avoid !important;
+    }
+    
+    .laudo-text { 
+      font-size: 11pt !important; 
+      line-height: 1.5 !important; 
+      text-align: justify !important; 
+      margin-top: 6px !important; 
+      white-space: pre-wrap !important;
+      text-rendering: optimizeLegibility;
+    }
+    
+    .obs-box { 
+      border: 1px solid #000 !important; 
+      padding: 10px !important; 
+      font-size: 10pt !important; 
+      background: #fafafa !important; 
+      margin-top: 8px !important;
+      page-break-inside: avoid !important;
+    }
+    
+    /* TAGS OTIMIZADAS PARA IMPRESSÃO */
+    .tag {
+      display: inline-block;
+      background: #e0f2fe !important;
+      color: #0369a1 !important;
+      padding: 3px 6px !important;
+      border-radius: 3px !important;
+      font-size: 9pt !important;
+      font-weight: 600 !important;
+      margin-right: 4px !important;
+      margin-bottom: 4px !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    .tag-material {
+      background: #dcfce7 !important;
+      color: #166534 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    /* TABELA OTIMIZADA PARA IMPRESSÃO */
+    .print-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1px solid #000 !important;
+      font-size: 10pt !important;
+      margin: 10px 0 !important;
+      page-break-inside: avoid !important;
+    }
+    
+    .print-table th {
+      background: #f0f0f0 !important;
+      border: 1px solid #000 !important;
+      padding: 8px !important;
+      text-align: left !important;
+      font-weight: bold !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    .print-table td {
+      border: 1px solid #000 !important;
+      padding: 8px !important;
+      vertical-align: top !important;
+    }
+    
+    /* ASSINATURAS OTIMIZADAS */
+    .assinaturas {
+      margin-top: 60px !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      text-align: center !important;
+      page-break-inside: avoid !important;
+      position: relative !important;
+    }
+    
+    .assinatura-box {
+      width: 48% !important;
+      padding-top: 40px !important;
+    }
+    
+    .linha-assinatura {
+      border-top: 1px solid #000 !important;
+      padding-top: 8px !important;
+      margin-top: 4px !important;
+    }
+    
+    /* INFORMAÇÕES DO CABEÇALHO */
+    .header-info {
+      font-size: 10pt !important;
+      margin: 8px 0 !important;
+      line-height: 1.3 !important;
+    }
+    
+    /* SOLUÇÕES NA IMPRESSÃO */
+    .print-solucao {
+      margin-bottom: 12px !important;
+      padding-bottom: 8px !important;
+      border-bottom: 1px dashed #ddd !important;
+      page-break-inside: avoid !important;
+    }
+    
+    .print-solucao:last-child {
+      border-bottom: none !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+  
+  <!-- Cabeçalho com tons de azul escuro (igual ao personalizado.html) -->
+  <header class="bg-primary text-white py-4 px-6 no-print">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <h1 class="text-2xl font-black uppercase tracking-tight">SL CONSTRUÇÃO CIVIL</h1>
+          <p class="text-slate-300 text-sm">Sistema Integrado de Laudos Técnicos</p>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <div class="text-right">
+            <p class="text-sm">
+              LAUDO: <span id="laudo-number" class="font-bold">001-2026</span>
+            </p>
+            <p class="text-xs text-slate-300" id="current-date">27/01/2026, 09:42</p>
+          </div>
+          
+          <button onclick="voltarSemSalvar()" class="no-print bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+              <i class="fas fa-arrow-left mr-2"></i>Voltar para orçamentos sem salvar
+          </button>
+          
+          <button onclick="salvarParaSistemaPrincipal()" class="no-print bg-secondary hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+            <i class="fas fa-exchange-alt mr-2"></i>Salvar no Orçamento
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 editor-mode">
+    <div class="card">
+      <h2>1. Identificação</h2>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <div>
+          <label>Cliente</label>
+          <input type="text" id="cliente" placeholder="Ex: Sr. João da Silva">
+        </div>
+        <div>
+          <label>Data</label>
+          <input type="date" id="data">
+        </div>
+        <div style="grid-column: span 2">
+          <label>Endereço da Obra</label>
+          <input type="text" id="endereco" placeholder="Rua, Bairro, Cidade">
+        </div>
+        <!-- NOVO CAMPO: RESPONSÁVEL TÉCNICO -->
+        <div style="grid-column: span 2">
+          <label>Responsável Técnico (Assinatura do Laudo)</label>
+          <input type="text" id="responsavel" placeholder="Nome completo e registro profissional (ex: Eng. João Silva - CREA 123456)">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Objetivo do Laudo</h2>
+      
+      <div class="magic-box">
+        <label>O que você vai vistoriar? (Resuma em poucas palavras)</label>
+        <input type="text" id="inputObjetivo" placeholder="Ex: infiltração na laje da cozinha">
+        <button class="btn btn-magic" onclick="gerarObjetivo()">✨ Criar Texto Técnico</button>
+      </div>
+
+      <div class="result-area">
+        <label>Texto Profissional Gerado (Editável):</label>
+        <textarea id="textoObjetivo">O presente trabalho tem por objetivo efetuar vistoria técnica para constatar as anomalias...</textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. O que você viu na obra?</h2>
+      
+      <div class="magic-box">
+        <label>Descreva com suas palavras o que encontrou:</label>
+        <textarea id="inputInspecao" placeholder="Ex: vi muita rachadura no teto, ferrugem aparecendo na viga e o piso ta desnivelado."></textarea>
+        <button class="btn btn-magic" onclick="gerarInspecao()">✨ Transformar em Linguagem Técnica</button>
+      </div>
+
+      <div class="result-area">
+        <label>Texto Técnico Gerado:</label>
+        <textarea id="textoInspecao"></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4. Diagnóstico Rápido</h2>
+      <p style="font-size:0.85rem; color:#64748b; margin-bottom:15px">Adicione os principais problemas encontrados.</p>
+      
+      <div id="listaProblemas">
+        <div class="checklist-item">
+          <select class="local">
+            <option value="">Selecione o Local...</option>
+            <option>Laje / Teto</option>
+            <option>Parede Interna</option>
+            <option>Fachada Externa</option>
+            <option>Piso</option>
+            <option>Viga / Pilar</option>
+            <option>Telhado</option>
+          </select>
+          <select class="patologia">
+            <option value="">Qual o problema?</option>
+            <option>Infiltração / Umidade</option>
+            <option>Trincas e Fissuras</option>
+            <option>Descolamento de Reboco</option>
+            <option>Ferragem Exposta (Corrosão)</option>
+            <option>Mofo / Bolor</option>
+            <option>Instalação Elétrica Irregular</option>
+          </select>
+          <select class="risco">
+            <option>Risco Baixo</option>
+            <option>Risco Médio</option>
+            <option>Risco Alto</option>
+          </select>
+          <button onclick="removerLinha(this)" style="color:red; background:none; border:none; cursor:pointer">X</button>
+        </div>
+      </div>
+      
+      <button class="btn" style="background:#64748b; margin-top:10px" onclick="adicionarLinha()">+ Adicionar outro problema</button>
+    </div>
+
+    <!-- NOVA SEÇÃO: RECOMENDAÇÕES -->
+    <div class="card">
+      <h2>5. Parecer Técnico e Recomendações</h2>
+      <p style="font-size:0.85rem; color:#64748b; margin-bottom:15px">
+        Adicione soluções técnicas para cada problema identificado. Selecione um problema para ver as soluções recomendadas.
+      </p>
+      
+      <div class="controles-recomendacao">
+        <div>
+          <label>Problema:</label>
+          <select id="selecionarProblema">
+            <option value="">Selecione um problema</option>
+          </select>
+        </div>
+        
+        <div>
+          <label>Solução Recomendada:</label>
+          <select id="selecionarSolucao" disabled>
+            <option value="">Primeiro selecione um problema</option>
+          </select>
+        </div>
+        
+        <div style="display: flex; align-items: flex-end;">
+          <button class="btn btn-warning" id="btnAdicionarSolucao" disabled>
+            <i class="fas fa-plus"></i> Adicionar Solução
+          </button>
+        </div>
+      </div>
+      
+      <div id="listaRecomendacoes" class="recomendacao-container">
+        <!-- As soluções serão adicionadas aqui dinamicamente -->
+        <div id="nenhuma-solucao" style="text-align: center; padding: 2rem; color: #94a3b8; background: #f8fafc; border-radius: 8px;">
+          <i class="fas fa-lightbulb" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <p>Nenhuma solução adicionada ainda. Selecione um problema e adicione soluções recomendadas.</p>
+        </div>
+      </div>
+      
+      <div class="magic-box">
+        <label>Observações Adicionais (Parecer Técnico):</label>
+        <textarea id="observacoesTecnicas" placeholder="Digite aqui observações técnicas complementares, prazos estimados, considerações sobre normas técnicas, etc."></textarea>
+        <button class="btn btn-magic" onclick="gerarParecerAutomatico()">✨ Gerar Parecer Automático</button>
+      </div>
+    </div>
+
+    <div class="card" style="border-color: var(--success);">
+      <h2>6. Finalização</h2>
+      <button class="btn btn-success" onclick="gerarRelatorioFinal()">
+        <i class="fas fa-file-alt"></i> GERAR LAUDO COMPLETO E IMPRIMIR
+      </button>
+        <button onclick="voltarSemSalvar()" class="no-print bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i>Voltar para orçamentos sem salvar
+        </button>
+
+      <p style="font-size:0.8rem; color:#64748b; margin-top:10px; text-align:center;">
+        <i class="fas fa-info-circle"></i> Aperte Ctrl+P para imprimir ou salvar como PDF
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 border-t border-gray-200 mt-8 no-print">
+    <div class="container mx-auto px-4 py-6 text-center text-gray-600">
+      <p>Sistema Integrado de Laudos Técnicos © 2026 | Desenvolvido para seu dia a dia na obra</p>
+      <p class="text-sm mt-2">⚠️ Todos os dados são salvos localmente no seu navegador. Este sistema permite gerar laudos técnicos completos e integrá-los ao orçamento.</p>
+    </div>
+  </footer>
+
+  <div id="printable-laudo">
+    <div class="a4-page">
+      <div class="laudo-header">
+        <div class="laudo-title">LAUDO TÉCNICO DE VISTORIA</div>
+        <div id="print-header-info"></div>
+      </div>
+
+      <div class="laudo-section">
+        <h3>1. Objetivo</h3>
+        <div class="laudo-text" id="print-objetivo"></div>
+      </div>
+
+      <div class="laudo-section">
+        <h3>2. Da Vistoria Técnica</h3>
+        <div class="laudo-text" id="print-inspecao"></div>
+      </div>
+
+      <div class="laudo-section">
+        <h3>3. Diagnóstico das Anomalias</h3>
+        <div class="laudo-text" id="print-diagnostico"></div>
+      </div>
+
+      <div class="laudo-section">
+        <h3>4. Parecer Técnico e Recomendações</h3>
+        <div class="laudo-text" id="print-recomendacoes"></div>
+        <div id="print-materiais"></div>
+        <div class="laudo-text" id="print-observacoes"></div>
+      </div>
+
+      <div class="assinaturas">
+        <div class="assinatura-box">
+          <div class="linha-assinatura"></div>
+          <strong id="print-responsavel">[Responsável Técnico]</strong><br>
+          Responsável Técnico<br>
+          <span id="print-registro" style="font-size: 9pt;"></span>
+        </div>
+        <div class="assinatura-box">
+          <div class="linha-assinatura"></div>
+          <strong id="print-cliente-sign">[Cliente]</strong><br>
+          Contratante
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 20px; font-size: 9pt; color: #666;">
+        <p>Documento gerado automaticamente pelo Sistema SL Construção Civil</p>
+        <p>Data de emissão: <span id="print-data-emissao"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluir o arquivo JavaScript separado -->
+  <script src="js\editor_laudo.js"></script>
+</body>
+</html>

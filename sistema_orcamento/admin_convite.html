@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Convites VIP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-slate-900 text-white flex items-center justify-center h-screen">
+
+    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl max-w-md w-full border border-slate-700 text-center">
+        <div class="mb-6">
+            <div class="bg-amber-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                <i data-feather="key" class="text-white"></i>
+            </div>
+            <h1 class="text-2xl font-bold">Gerar Acesso VIP</h1>
+            <p class="text-gray-400 text-sm">Crie um link único para seu cliente</p>
+        </div>
+        
+        <div class="space-y-4">
+            <div>
+                <label class="block text-left text-sm text-gray-400 mb-1">Validade do Link</label>
+                <select id="tempoValidade" class="w-full bg-slate-700 border border-slate-600 rounded p-3 text-white focus:ring-2 focus:ring-amber-500 outline-none">
+                    <option value="30" selected>30 Minutos (Padrão)</option>
+                    <option value="60">1 Hora</option>
+                    <option value="1440">24 Horas</option>
+                </select>
+            </div>
+
+            <button onclick="gerarLink()" id="btnGerar" class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-lg font-bold transition flex items-center justify-center gap-2 shadow-lg">
+                <i data-feather="link"></i> Gerar Link
+            </button>
+
+            <div id="resultadoBox" class="hidden mt-4">
+                <p class="text-xs text-gray-400 mb-2">Copie e envie no WhatsApp:</p>
+                <div class="p-3 bg-slate-950 rounded border border-green-900/50 flex items-center justify-between gap-2">
+                    <input type="text" id="linkFinal" readonly class="bg-transparent text-green-400 text-sm font-mono w-full outline-none">
+                    <button onclick="copiar()" class="text-gray-400 hover:text-white"><i data-feather="copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+
+    <script>
+        feather.replace();
+
+        async function gerarLink() {
+            const btn = document.getElementById('btnGerar');
+            const minutos = parseInt(document.getElementById('tempoValidade').value);
+            
+            btn.innerHTML = "Gerando...";
+            btn.disabled = true;
+
+            // Define expiração
+            const dataExpira = new Date();
+            dataExpira.setMinutes(dataExpira.getMinutes() + minutos);
+            const token = crypto.randomUUID();
+
+            try {
+                // Insere na tabela 'convites' que você criou
+                const { error } = await sbClient
+                    .from('convites')
+                    .insert([{ 
+                        token: token, 
+                        usado: false,
+                        expira_em: dataExpira.toISOString() 
+                    }]);
+
+                if (error) throw error;
+
+                // Monta o link (Troca o nome do arquivo atual pelo de cadastro)
+                const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+                const link = `${baseUrl}/cadastro.html?token=${token}`;
+
+                document.getElementById('linkFinal').value = link;
+                document.getElementById('resultadoBox').classList.remove('hidden');
+                
+                btn.innerHTML = '<i data-feather="check"></i> Sucesso!';
+                setTimeout(() => { btn.innerHTML = '<i data-feather="link"></i> Gerar Novo'; btn.disabled = false; }, 2000);
+
+            } catch (err) {
+                alert("Erro: " + err.message);
+                btn.innerHTML = "Tentar Novamente";
+                btn.disabled = false;
+            }
+        }
+
+        function copiar() {
+            const copyText = document.getElementById("linkFinal");
+            copyText.select();
+            navigator.clipboard.writeText(copyText.value);
+            alert("Link copiado!");
+        }
+    </script>
+</body>
+</html>
