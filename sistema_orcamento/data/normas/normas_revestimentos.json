@@ -1,0 +1,24 @@
+{
+  "id": "normas_revestimentos",
+  "area": "Revestimentos cerâmicos e contrapiso",
+  "normas": [
+    {
+      "codigo": "NBR 13753",
+      "titulo": "Revestimento de piso interno ou externo com placas cerâmicas",
+      "aplicacao_tecnica": "Define critérios de assentamento e juntas.",
+      "linguagem_simples": "Mostra como assentar piso corretamente."
+    },
+    {
+      "codigo": "NBR 14081",
+      "titulo": "Argamassa colante industrializada",
+      "aplicacao_tecnica": "Classifica argamassas conforme aplicação.",
+      "linguagem_simples": "Indica qual argamassa usar para cada tipo de piso."
+    },
+    {
+      "codigo": "NBR 14992",
+      "titulo": "Execução de revestimento com argamassa",
+      "aplicacao_tecnica": "Orienta preparo da base e aplicação.",
+      "linguagem_simples": "Ensina a preparar o contrapiso corretamente."
+    }
+  ]
+}

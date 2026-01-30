@@ -1,0 +1,26 @@
+{
+  "id_num": 1,
+  "id": "fissura_horizontal_encunhamento",
+  "nome": "Fissura por falha de encunhamento",
+  "titulo": "Fissura por falha de encunhamento",
+  "categoria": "Alvenaria e Vedação",
+  "diagnostico": {
+    "descricao": "Foram identificadas fissuras horizontais localizadas na interface entre a última fiada de alvenaria e o elemento estrutural superior.\nObservou-se a presença de fissura contínua junto ao encontro da parede de vedação com a viga, característica de falha ou ausência de encunhamento adequado.",
+    "manifestacoes": [
+      "abertura linear contínua",
+      "desprendimento localizado do revestimento",
+      "fissura visível após pintura ou reboco"
+    ],
+    "causas": [
+      "ausência ou execução inadequada do encunhamento da alvenaria",
+      "movimentação diferencial entre estrutura e vedação",
+      "retração da argamassa de assentamento ou do revestimento"
+    ]
+  },
+  "recomendacoes": [
+    "Recomenda-se a correção da interface entre a alvenaria e o elemento estrutural.",
+    "Indica-se a adequação do encunhamento da parede, visando melhor acomodação entre os elementos.",
+    "A correção apenas estética não elimina a causa da fissura, podendo ocorrer reaparecimento.",
+    "Recomenda-se acompanhamento visual após a execução do serviço."
+  ]
+}

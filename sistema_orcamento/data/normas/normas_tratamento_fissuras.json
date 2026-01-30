@@ -1,0 +1,30 @@
+[
+  {
+    "codigo": "NBR 13749",
+    "titulo": "Revestimento de paredes e tetos de argamassas inorgânicas — Especificação",
+    "aplicacao": ["Alvenaria e Vedação", "Revestimentos"],
+    "descricao": "Estabelece os critérios de aceitação, execução e reparo de revestimentos em argamassa, incluindo o tratamento de fissuras superficiais e falhas de aderência.",
+    "linguagem_simples": "É a norma que orienta como o reboco deve ser feito e consertado para não rachar ou soltar."
+  },
+  {
+    "codigo": "NBR 13529",
+    "titulo": "Execução de revestimento de paredes e tetos de argamassas inorgânicas — Procedimento",
+    "aplicacao": ["Alvenaria e Vedação", "Revestimentos"],
+    "descricao": "Define os procedimentos corretos de preparo da base, aplicação, cura e reparo do revestimento, prevenindo fissuras por retração ou má execução.",
+    "linguagem_simples": "Mostra o jeito certo de preparar a parede e aplicar o reboco para evitar trincas depois de seco."
+  },
+  {
+    "codigo": "NBR 15575-4",
+    "titulo": "Edificações habitacionais — Desempenho — Parte 4: Sistemas de vedações verticais internas e externas",
+    "aplicacao": ["Alvenaria e Vedação"],
+    "descricao": "Estabelece requisitos de desempenho, estanqueidade e durabilidade das paredes, limitando fissuras que possam comprometer a vida útil ou permitir infiltrações.",
+    "linguagem_simples": "É a norma que garante que a parede não rache a ponto de deixar passar água ou perder resistência."
+  },
+  {
+    "codigo": "NBR 6118",
+    "titulo": "Projeto de estruturas de concreto — Procedimento",
+    "aplicacao": ["Estruturas", "Alvenaria Estrutural"],
+    "descricao": "Define critérios de projeto e controle das estruturas de concreto, sendo referência para análise de fissuras estruturais e limites aceitáveis de abertura.",
+    "linguagem_simples": "Norma usada para avaliar se uma trinca é apenas superficial ou se pode ser problema na estrutura."
+  }
+]

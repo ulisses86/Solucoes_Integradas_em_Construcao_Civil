@@ -1,0 +1,18 @@
+{
+  "id": "normas_pintura",
+  "area": "Pintura e acabamento",
+  "normas": [
+    {
+      "codigo": "NBR 13245",
+      "titulo": "Tintas imobiliárias",
+      "aplicacao_tecnica": "Define requisitos mínimos de qualidade das tintas.",
+      "linguagem_simples": "Garante que a tinta usada tenha qualidade."
+    },
+    {
+      "codigo": "NBR 13529",
+      "titulo": "Execução de pintura em edificações",
+      "aplicacao_tecnica": "Define preparo da superfície e aplicação.",
+      "linguagem_simples": "Mostra como preparar a parede antes de pintar."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "codigo": "NBR 6118",
+    "titulo": "Projeto de estruturas de concreto",
+    "aplicacao": ["Alvenaria e Vedação"],
+    "aplicacao_tecnica": "Define critérios estruturais que influenciam vergas, contravergas e comportamento das alvenarias.",
+    "linguagem_simples": "Define como reforçar vãos de portas e janelas para evitar trincas."
+  },
+  {
+    "codigo": "NBR 15961",
+    "titulo": "Alvenaria estrutural",
+    "aplicacao": ["Alvenaria e Vedação"],
+    "aplicacao_tecnica": "Estabelece critérios de execução e controle da alvenaria.",
+    "linguagem_simples": "Orienta como a parede deve ser bem executada para não trincar."
+  },
+  {
+    "codigo": "NBR 13749",
+    "titulo": "Revestimento de paredes e tetos com argamassas",
+    "aplicacao": ["Alvenaria e Vedação"],
+    "aplicacao_tecnica": "Define preparo, aplicação e cura dos revestimentos.",
+    "linguagem_simples": "Mostra como fazer o reboco corretamente para evitar fissuras."
+  }
+]
