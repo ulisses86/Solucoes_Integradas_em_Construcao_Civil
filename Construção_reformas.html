@@ -39,6 +39,14 @@
         .cad-image {
             filter: brightness(0.9) contrast(1.1);
         }
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 107, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0); }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -61,6 +69,7 @@
                 <a href="#home" class="hover:text-orange-500 transition">Início</a>
                 <a href="#about" class="hover:text-orange-500 transition">Sobre Nós</a>
                 <a href="#services" class="hover:text-orange-500 transition">Serviços</a>
+                <a href="#orcamento" class="hover:text-orange-500 transition">Sistema de Orçamento</a>
                 <a href="#ebook" class="hover:text-orange-500 transition">E-book</a>
                 <a href="#contact" class="hover:text-orange-500 transition">Contato</a>
             </div>
@@ -74,6 +83,7 @@
             <a href="#home" class="block py-2 hover:text-orange-500 transition">Início</a>
             <a href="#about" class="block py-2 hover:text-orange-500 transition">Sobre Nós</a>
             <a href="#services" class="block py-2 hover:text-orange-500 transition">Serviços</a>
+            <a href="#orcamento" class="block py-2 hover:text-orange-500 transition">Sistema de Orçamento</a>
             <a href="#ebook" class="block py-2 hover:text-orange-500 transition">E-book</a>
             <a href="#contact" class="block py-2 hover:text-orange-500 transition">Contato</a>
         </div>
@@ -185,6 +195,118 @@
                     <h3 class="text-xl font-bold mb-3">Piscinas</h3>
                     <p class="text-gray-600">Revitalização de piscinas, trocas de pastilhas e juntas, manutenção preventiva e corretiva e decks completos.</p>
                 </div>              
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Sistema de Orçamento -->
+    <section id="orcamento" class="py-20 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="inline-block bg-orange-500 text-white px-6 py-2 rounded-full mb-4 text-lg font-semibold pulse-glow">
+                        <i class="fas fa-bullhorn mr-2"></i>LANÇAMENTO POR TEMPO LIMITADO
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Sistema de Orçamento Online</h2>
+                    <p class="text-xl md:text-2xl mb-4">Para <span class="font-bold text-orange-300">Pedreiros, Técnicos, Engenheiros e Profissionais da Construção Civil</span></p>
+                    <div class="w-32 h-1 bg-orange-500 mx-auto mt-6"></div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white border-opacity-20 mb-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-6">Crie Orçamentos Profissionais em Minutos!</h3>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-400 text-xl mr-3 mt-1"></i>
+                                    <span class="text-lg"><strong>Grátis durante o lançamento</strong> - Aproveite enquanto dura!</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-400 text-xl mr-3 mt-1"></i>
+                                    <span class="text-lg">Interface simples e intuitiva</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-400 text-xl mr-3 mt-1"></i>
+                                    <span class="text-lg">Calculadora automática de materiais e mão de obra</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-400 text-xl mr-3 mt-1"></i>
+                                    <span class="text-lg">Modelos profissionais prontos para impressão</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-orange-400 text-xl mr-3 mt-1"></i>
+                                    <span class="text-lg">Gestão de clientes e histórico de orçamentos</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="bg-orange-500 bg-opacity-20 border-l-4 border-orange-500 p-4 mb-8">
+                                <p class="italic">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>Atenção:</strong> Esta versão gratuita é por tempo limitado. Cadastre-se agora e garanta acesso permanente!
+                                </p>
+                            </div>
+                            
+                            <div class="text-center md:text-left">
+                                <a href="https://ulisses900.github.io/orcamento/" target="_blank" class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                                    <i class="fas fa-external-link-alt mr-2"></i>ACESSAR SISTEMA DE ORÇAMENTO
+                                </a>
+                                <p class="mt-4 text-orange-200 text-sm">
+                                    <i class="fas fa-lock mr-1"></i> Cadastro rápido e seguro
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-6 shadow-2xl">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-6 text-center">Quem deve usar este sistema?</h4>
+                            <div class="space-y-6">
+                                <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-hard-hat text-blue-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800 text-lg">Pedreiros e Mestres de Obra</h5>
+                                        <p class="text-gray-600">Crie orçamentos detalhados para seus clientes com rapidez e profissionalismo.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-user-tie text-blue-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800 text-lg">Técnicos em Edificações</h5>
+                                        <p class="text-gray-600">Elabore projetos e orçamentos técnicos com precisão e organização.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-drafting-compass text-blue-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800 text-lg">Engenheiros e Arquitetos</h5>
+                                        <p class="text-gray-600">Tenha ferramentas profissionais para orçamentação de obras e serviços.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-toolbox text-blue-700 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-gray-800 text-lg">Profissionais Autônomos</h5>
+                                        <p class="text-gray-600">Aumente sua credibilidade com orçamentos bem apresentados e detalhados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-xl mb-2">Não perca esta oportunidade!</p>
+                    <p class="text-lg text-orange-200">Sistema 100% gratuito durante o período de lançamento.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -493,11 +615,11 @@
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
                     </div>
-                    <p class="text-sm">© 2025 Construções Técnicas. Todos os direitos reservados.</p>
+                    <p class="text-sm">© 2026 Construções Técnicas. Todos os direitos reservados.</p>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-                <p>Registro no CFT-PE: 123456/PE</p>
+                <p>Recife - PE</p>
             </div>
         </div>
     </footer>
