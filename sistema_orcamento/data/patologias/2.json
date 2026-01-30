@@ -1,0 +1,81 @@
+{
+  "id_num": 2,
+  "id": "fissura_mapeada_retracao",
+  "titulo": "Fissuras mapeadas por retração térmica ou higroscópica",
+  "categoria": "Alvenaria e Vedação",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "baixo",
+  "diagnostico": {
+    "frases": [
+      "Fissuras superficiais, de pequena abertura, distribuídas de forma ramificada, sem direção preferencial.",
+      "Manifestação caracterizada por uma rede de trincas finas na superfície do revestimento, sem indícios de comprometimento estrutural."
+    ],
+    "manifestacoes_comuns": [
+      "Padrão semelhante a teia de aranha ou mapa na superfície",
+      "Fissuras finas que não acompanham juntas de assentamento ou blocos"
+    ],
+    "causas_provaveis": [
+      "Retração rápida da argamassa durante a fase de cura, devido à perda acelerada de água",
+      "Dosagem inadequada da argamassa, com excesso de água ou material fino",
+      "Cura insuficiente do revestimento em condições de vento ou alta temperatura"
+    ],
+    "riscos_associados": [
+      "Comprometimento estético do revestimento",
+      "Facilidade de penetração de umidade ao longo do tempo, caso não tratada"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A intervenção é predominantemente de caráter corretivo e estético.",
+      "Recomenda-se verificar se as fissuras estão estabilizadas antes da execução do reparo."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Reparo localizado das fissuras mediante abertura superficial, limpeza e preenchimento com argamassa polimérica ou massa acrílica apropriada.",
+          "Tratamento das fissuras por escarificação leve e aplicação de material flexível compatível com pequenas aberturas."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "O reparo deve ser feito somente após a estabilização da retração do revestimento (\"quando a parede já terminou de secar\").",
+          "Antes do reparo, a superfície deve estar limpa e levemente umedecida para melhorar a aderência do material (\"não pode aplicar com a parede muito seca ou suja\")."
+        ],
+        "tags": ["fissura superficial", "retração", "reparo local"]
+      },
+      {
+        "descricao_variacoes": [
+          "Aplicação de fundo preparador e posterior pintura com tinta acrílica flexível ou elastomérica.",
+          "Regularização superficial seguida de pintura com produto que auxilie na absorção de microfissuras."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicada quando as fissuras são muito finas e dispersas (\"trincas bem pequenas espalhadas pela parede\").",
+          "A pintura flexível ajuda a disfarçar e reduzir o reaparecimento das microfissuras (\"a tinta acompanha melhor a movimentação da parede\")."
+        ],
+        "tags": ["pintura", "acabamento", "microfissuras"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 13749",
+        "descricao": "Argamassa para assentamento e revestimento de paredes e tetos – Requisitos"
+      },
+      {
+        "codigo": "ABNT NBR 13529",
+        "descricao": "Execução de revestimento de paredes e tetos com argamassas inorgânicas – Procedimento"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Sem ensaios destrutivos ou laboratoriais"
+  ],
+  "observacoes_tecnicas": [
+    "Essa manifestação é comum em obras recentes, especialmente nos primeiros ciclos de secagem.",
+    "Recomenda-se monitorar se há aumento na abertura das fissuras ao longo do tempo."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não constitui parecer pericial nem avaliação estrutural completa.",
+    "As recomendações baseiam-se em boas práticas construtivas e observação visual."
+  ]
+}

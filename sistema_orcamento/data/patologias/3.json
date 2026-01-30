@@ -1,0 +1,82 @@
+{
+  "id_num": 3,
+  "id": "fissura_diagonal_esquadria",
+  "titulo": "Fissura diagonal em cantos de esquadrias",
+  "categoria": "Alvenaria e Vedação",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "medio",
+  "diagnostico": {
+    "frases": [
+      "Foram identificadas fissuras inclinadas partindo dos cantos de esquadrias, com inclinação característica em diagonal.",
+      "Manifestação típica localizada nos vértices de portas e janelas, indicando concentração de tensões na alvenaria."
+    ],
+    "manifestacoes_comuns": [
+      "Fissuras diagonais nos cantos superiores ou inferiores de portas e janelas",
+      "Abertura progressiva a partir do encontro da esquadria com o revestimento"
+    ],
+    "causas_provaveis": [
+      "Ausência ou dimensionamento inadequado de vergas e contravergas",
+      "Concentração de esforços devido à abertura na alvenaria",
+      "Movimentações diferenciais entre estrutura, alvenaria e esquadria"
+    ],
+    "riscos_associados": [
+      "Evolução da fissura com aumento de abertura",
+      "Perda de desempenho estético e de vedação",
+      "Facilidade de ingresso de umidade pelas aberturas"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A correção deve considerar a causa da fissuração, evitando apenas tratamentos superficiais.",
+      "Recomenda-se avaliar a existência e o estado das vergas e contravergas antes da definição da intervenção."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Execução ou reforço de verga e contraverga adequadas sobre e sob a esquadria, conforme boas práticas construtivas.",
+          "Implantação de elementos de distribuição de carga (verga e contraverga) para aliviar as tensões concentradas na abertura."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "Esses elementos ajudam a distribuir o peso da parede acima da janela ou porta (\"servem para não deixar o peso concentrar no canto da abertura\").",
+          "A ausência desses reforços é uma das causas mais comuns desse tipo de fissura (\"a parede racha porque falta apoio correto em cima da janela\")."
+        ],
+        "tags": ["verga", "contraverga", "esquadria", "alvenaria"]
+      },
+      {
+        "descricao_variacoes": [
+          "Tratamento da fissura com abertura controlada, aplicação de material flexível e recomposição do revestimento.",
+          "Correção localizada da trinca mediante limpeza, aplicação de selante flexível e acabamento final."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicado apenas quando a fissura estiver estabilizada e a causa estrutural já tiver sido corrigida (\"quando a trinca não continua abrindo\").",
+          "Tratamentos apenas estéticos não resolvem o problema se a causa não for eliminada."
+        ],
+        "tags": ["tratamento_superficial", "selante_flexivel", "acabamento"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 15961",
+        "descricao": "Alvenaria estrutural – Execução e controle de obras"
+      },
+      {
+        "codigo": "ABNT NBR 15575",
+        "descricao": "Edificações habitacionais – Desempenho (diretrizes gerais)"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados ensaios destrutivos nem verificação estrutural detalhada"
+  ],
+  "observacoes_tecnicas": [
+    "A recorrência da fissura indica necessidade de intervenção mais profunda.",
+    "Recomenda-se acompanhamento após a execução do reparo."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não constitui parecer estrutural nem substitui projeto executivo.",
+    "As recomendações baseiam-se em boas práticas da construção civil e observação visual."
+  ]
+}

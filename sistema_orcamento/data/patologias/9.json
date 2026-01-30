@@ -1,0 +1,83 @@
+{
+  "id_num": 9,
+  "id": "descascamento_pintura",
+  "titulo": "Descascamento de pintura",
+  "categoria": "Pintura e Acabamento",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "baixo",
+  "diagnostico": {
+    "frases": [
+      "Observou-se descascamento da película de tinta, com perda de aderência ao substrato.",
+      "Manifestação caracterizada pelo desprendimento parcial da pintura, expondo camadas inferiores."
+    ],
+    "manifestacoes_comuns": [
+      "Placas de tinta se soltando da superfície",
+      "Bolhas, enrugamento ou falhas entre demãos",
+      "Diferença de tonalidade após o desprendimento"
+    ],
+    "causas_provaveis": [
+      "Aplicação da tinta sobre superfície suja, úmida ou sem preparo adequado",
+      "Incompatibilidade entre tintas ou entre tinta e fundo",
+      "Presença de umidade no substrato"
+    ],
+    "riscos_associados": [
+      "Comprometimento estético do ambiente",
+      "Exposição do reboco a agentes externos",
+      "Reincidência do problema se a causa não for eliminada"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A correção deve considerar o preparo adequado da superfície antes da nova pintura.",
+      "Recomenda-se identificar e eliminar possíveis fontes de umidade antes do reparo."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Remoção completa da tinta solta, lixamento da superfície e reaplicação do sistema de pintura adequado.",
+          "Raspagem das áreas comprometidas, regularização do substrato e nova pintura conforme recomendação do fabricante."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "A superfície deve estar seca, limpa e firme antes da pintura (\"não pode pintar em parede úmida ou com poeira\").",
+          "A utilização de fundo preparador melhora a aderência da nova pintura."
+        ],
+        "tags": ["pintura", "preparo_superficie", "acabamento"]
+      },
+      {
+        "descricao_variacoes": [
+          "Aplicação de tinta adequada ao ambiente, após correção pontual do substrato.",
+          "Repintura localizada quando o descascamento for restrito a pequenas áreas."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicada quando o problema é localizado e sem presença de umidade contínua (\"quando é só falha de pintura\").",
+          "Caso a umidade persista, a pintura tende a descascar novamente."
+        ],
+        "tags": ["repintura", "reparo_local"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 13245",
+        "descricao": "Tintas imobiliárias – Execução de pinturas em edificações"
+      },
+      {
+        "codigo": "ABNT NBR 15575",
+        "descricao": "Edificações habitacionais – Desempenho (diretrizes gerais)"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados ensaios de aderência ou umidade"
+  ],
+  "observacoes_tecnicas": [
+    "A pintura é um sistema de acabamento e depende diretamente do preparo do substrato.",
+    "Falhas recorrentes indicam necessidade de revisão do sistema aplicado."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não constitui parecer pericial.",
+    "As recomendações baseiam-se em boas práticas construtivas e observação visual."
+  ]
+}

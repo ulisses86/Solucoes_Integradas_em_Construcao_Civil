@@ -1,0 +1,83 @@
+{
+  "id_num": 4,
+  "id": "umidade_ascendente_capilaridade",
+  "titulo": "Umidade ascendente por capilaridade",
+  "categoria": "Impermeabilização e Umidade",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "medio",
+  "diagnostico": {
+    "frases": [
+      "Foram observados sinais de umidade concentrados na base das paredes, com manifestação progressiva a partir do nível do piso.",
+      "Identificou-se presença de umidade ascendente, caracterizada por manchas, descascamentos e degradação do revestimento nos rodapés."
+    ],
+    "manifestacoes_comuns": [
+      "Manchas escuras ou amareladas na parte inferior das paredes",
+      "Descascamento de pintura e desprendimento de reboco",
+      "Presença de mofo ou bolor próximo ao piso"
+    ],
+    "causas_provaveis": [
+      "Ausência ou falha na impermeabilização do baldrame ou fundação",
+      "Contato direto da alvenaria com o solo úmido",
+      "Deficiência na drenagem do entorno da edificação"
+    ],
+    "riscos_associados": [
+      "Degradação progressiva do revestimento e acabamento",
+      "Ambiente insalubre devido à proliferação de fungos",
+      "Redução da vida útil dos materiais da base da alvenaria"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A correção deve atuar preferencialmente na causa da umidade, e não apenas nos efeitos visíveis.",
+      "Recomenda-se a adoção de medidas de bloqueio da ascensão da umidade pelo sistema construtivo."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Execução de barreira química ou física para bloqueio da umidade ascendente na base da alvenaria.",
+          "Implantação de sistema de impermeabilização no encontro da parede com o solo, criando uma barreira contra a umidade."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "Essa solução impede que a umidade continue subindo pela parede (\"é como cortar o caminho da água dentro da parede\").",
+          "Deve ser executada por etapas e com produtos adequados ao tipo de alvenaria existente."
+        ],
+        "tags": ["umidade_ascendente", "impermeabilizacao", "barreira_capilar"]
+      },
+      {
+        "descricao_variacoes": [
+          "Remoção do reboco deteriorado, tratamento da base e recomposição com argamassa impermeável.",
+          "Substituição do revestimento danificado por argamassa com aditivo impermeabilizante."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "Essa intervenção trata os danos visíveis, mas deve ser combinada com o bloqueio da umidade (\"senão o problema volta\").",
+          "Não é recomendado apenas refazer a pintura sem eliminar a origem da umidade."
+        ],
+        "tags": ["revestimento", "argamassa_impermeavel", "recuperacao"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 9575",
+        "descricao": "Impermeabilização – Seleção e projeto"
+      },
+      {
+        "codigo": "ABNT NBR 9574",
+        "descricao": "Execução de impermeabilização – Procedimento"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados ensaios de umidade ou sondagens no solo"
+  ],
+  "observacoes_tecnicas": [
+    "A simples pintura da área afetada não elimina a causa da umidade.",
+    "A reincidência do problema indica necessidade de intervenção mais profunda."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não substitui projeto específico de impermeabilização.",
+    "As recomendações baseiam-se em boas práticas construtivas e observação visual."
+  ]
+}

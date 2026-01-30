@@ -1,0 +1,34 @@
+{
+  "id": "impermeabilizacao_laje",
+  "titulo": "Impermeabilização de lajes e superfícies expostas",
+  "quando_utilizar": [
+    "Infiltração em lajes de cobertura",
+    "Manchas de umidade no teto do último pavimento"
+  ],
+  "procedimentos_variacoes": [
+    {
+      "descricao_tecnica": "Impermeabilização flexível com manta líquida ou membrana elastomérica.",
+      "traducao_pratica": "Aplicar produto impermeável tipo borracha líquida para vedar a passagem da água.",
+      "nivel_intervencao": "medio"
+    },
+    {
+      "descricao_tecnica": "Impermeabilização com manta asfáltica aplicada a quente ou fria.",
+      "traducao_pratica": "Instalar manta asfáltica sobre a laje para impedir infiltração.",
+      "nivel_intervencao": "alto"
+    }
+  ],
+  "cuidados_execucao": [
+    "Regularizar e limpar a superfície",
+    "Respeitar tempo de cura entre demãos"
+  ],
+  "referencias_normativas": [
+    {
+      "codigo": "NBR 9575",
+      "descricao": "Impermeabilização – Seleção e projeto"
+    },
+    {
+      "codigo": "NBR 9574",
+      "descricao": "Execução de impermeabilização"
+    }
+  ]
+}

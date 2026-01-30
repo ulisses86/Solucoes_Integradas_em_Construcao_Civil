@@ -1,0 +1,83 @@
+{
+  "id_num": 8,
+  "id": "som_cavo_piso_ceramico",
+  "titulo": "Descolamento de piso cerâmico (som cavo)",
+  "categoria": "Revestimentos e Pisos",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "baixo",
+  "diagnostico": {
+    "frases": [
+      "Identificou-se som cavo em piso cerâmico por percussão simples, indicando falha de aderência entre a peça e o contrapiso.",
+      "Manifestação caracterizada por descolamento parcial das placas cerâmicas, sem deslocamento visível imediato."
+    ],
+    "manifestacoes_comuns": [
+      "Som oco ao bater levemente sobre as peças",
+      "Sensação de piso solto sob o tráfego",
+      "Trincas pontuais em peças adjacentes"
+    ],
+    "causas_provaveis": [
+      "Aplicação inadequada da argamassa colante (falta de dupla colagem)",
+      "Contrapiso sem preparo adequado ou com pó superficial",
+      "Ausência de juntas de movimentação"
+    ],
+    "riscos_associados": [
+      "Risco de quebra das peças com o uso",
+      "Propagação do descolamento para áreas vizinhas",
+      "Comprometimento do acabamento do piso"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "Recomenda-se avaliar a extensão do som cavo antes de definir a intervenção.",
+      "A correção deve priorizar o preparo adequado do contrapiso e o correto assentamento."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Remoção das peças com som cavo, limpeza do contrapiso e reassentamento com argamassa colante adequada.",
+          "Retirada das placas soltas e novo assentamento utilizando técnica correta e argamassa compatível."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "O contrapiso deve estar firme, limpo e nivelado antes do assentamento (\"não pode colar piso em base solta ou empoeirada\").",
+          "A dupla colagem melhora a aderência e reduz o risco de som cavo."
+        ],
+        "tags": ["piso_ceramico", "som_cavo", "reassentamento"]
+      },
+      {
+        "descricao_variacoes": [
+          "Substituição localizada das peças comprometidas quando o problema for pontual.",
+          "Reparo restrito às áreas com som cavo identificado."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicada quando o som cavo atinge poucas peças (\"quando só um trecho pequeno está oco\").",
+          "É importante verificar áreas vizinhas para evitar retrabalho."
+        ],
+        "tags": ["reparo_local", "troca_de_placas"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 13753",
+        "descricao": "Revestimento de pisos internos com placas cerâmicas – Procedimento"
+      },
+      {
+        "codigo": "ABNT NBR 14081",
+        "descricao": "Argamassa colante industrializada – Requisitos"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual e percussão simples",
+    "Não foram realizados ensaios de aderência"
+  ],
+  "observacoes_tecnicas": [
+    "O som cavo é indicativo de falha de aderência e tende a evoluir com o uso.",
+    "A manutenção corretiva evita a quebra das peças."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não constitui parecer pericial.",
+    "As recomendações baseiam-se em boas práticas construtivas e observação visual."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "tratamento_fissuras",
+  "titulo": "Tratamento de fissuras em alvenaria e revestimentos",
+  "categoria": "Alvenaria e Vedação",
+  "aplicacao": ["residencial", "comercial"],
+  "quando_utilizar": [
+    "Fissuras finas e estáveis",
+    "Trincas superficiais sem indícios estruturais"
+  ],
+  "procedimentos_variacoes": [
+    {
+      "descricao_tecnica": "Abertura controlada da fissura, limpeza do substrato e preenchimento com material flexível compatível.",
+      "traducao_pratica": "Abrir levemente a trinca, limpar bem e preencher com massa ou selador flexível para evitar que ela volte.",
+      "nivel_intervencao": "simples"
+    },
+    {
+      "descricao_tecnica": "Tratamento superficial com tela de reforço e posterior recomposição do revestimento.",
+      "traducao_pratica": "Aplicar uma telinha sobre a área trincada antes de refazer o reboco para reforçar o local.",
+      "nivel_intervencao": "medio"
+    }
+  ],
+  "observacoes_importantes": [
+    "Confirmar se a fissura está estabilizada antes do reparo",
+    "Não indicado para fissuras estruturais"
+  ],
+  "referencias_normativas": [
+    {
+      "codigo": "NBR 13749",
+      "descricao": "Revestimento de paredes e tetos com argamassas inorgânicas - Especificação"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id_num": 6,
+  "id": "eflorescencia_revestimento",
+  "titulo": "Eflorescência em revestimentos e alvenarias",
+  "categoria": "Revestimentos e Pisos",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "baixo",
+  "diagnostico": {
+    "frases": [
+      "Observou-se a presença de depósitos esbranquiçados na superfície do revestimento, característicos de eflorescência.",
+      "Manifestação superficial identificada pela formação de manchas brancas pulverulentas, sem alteração significativa da integridade do material."
+    ],
+    "manifestacoes_comuns": [
+      "Manchas brancas ou esbranquiçadas na superfície",
+      "Aspecto de pó ou cristalização sobre o revestimento",
+      "Maior incidência após períodos chuvosos ou lavagens"
+    ],
+    "causas_provaveis": [
+      "Migração de sais solúveis presentes na argamassa ou no material cerâmico",
+      "Passagem de água através do sistema construtivo",
+      "Cura inadequada ou excesso de umidade no substrato"
+    ],
+    "riscos_associados": [
+      "Comprometimento estético do revestimento",
+      "Indicação de presença de umidade recorrente no sistema",
+      "Possível reincidência caso a origem da umidade não seja eliminada"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A eflorescência é uma manifestação predominantemente estética, porém indica a presença de umidade.",
+      "Recomenda-se tratar tanto a manifestação visível quanto a causa da passagem de água."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Remoção da eflorescência por escovação a seco ou lavagem controlada da superfície.",
+          "Limpeza do revestimento utilizando métodos adequados para remoção dos sais superficiais."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "A limpeza deve ser feita após a superfície estar seca (\"não adianta lavar com a parede molhada\").",
+          "Não é recomendado o uso de produtos agressivos sem orientação técnica."
+        ],
+        "tags": ["eflorescencia", "limpeza", "revestimento"]
+      },
+      {
+        "descricao_variacoes": [
+          "Correção das fontes de umidade e posterior reaplicação de rejuntes ou proteção superficial.",
+          "Tratamento da origem da umidade, seguido de recomposição do acabamento."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "Se a água continuar passando, a eflorescência tende a reaparecer (\"limpar sem resolver a água faz a mancha voltar\").",
+          "A eliminação da umidade é essencial para a durabilidade do reparo."
+        ],
+        "tags": ["umidade", "reparo", "acabamento"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 13755",
+        "descricao": "Revestimento de paredes externas com placas cerâmicas – Procedimento"
+      },
+      {
+        "codigo": "ABNT NBR 15575",
+        "descricao": "Edificações habitacionais – Desempenho (diretrizes gerais)"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados ensaios laboratoriais para identificação dos sais"
+  ],
+  "observacoes_tecnicas": [
+    "A eflorescência não caracteriza, por si só, falha estrutural.",
+    "A reincidência indica necessidade de intervenção na origem da umidade."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não constitui parecer pericial.",
+    "As recomendações baseiam-se em observação visual e boas práticas construtivas."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "telhado_reparo",
+  "titulo": "Reparo em telhados e sistemas de cobertura",
+  "quando_utilizar": [
+    "Goteiras",
+    "Telhas quebradas ou deslocadas"
+  ],
+  "procedimentos_variacoes": [
+    {
+      "descricao_tecnica": "Substituição de telhas danificadas e reposicionamento das peças.",
+      "traducao_pratica": "Trocar telhas quebradas e ajustar as que saíram do lugar.",
+      "nivel_intervencao": "simples"
+    },
+    {
+      "descricao_tecnica": "Revisão de rufos, calhas e pontos de vedação.",
+      "traducao_pratica": "Conferir e vedar bem calhas e rufos para evitar infiltração.",
+      "nivel_intervencao": "medio"
+    }
+  ]
+}

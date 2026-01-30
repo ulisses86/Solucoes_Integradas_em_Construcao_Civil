@@ -1,0 +1,21 @@
+{
+  "id": "vergas_contravergas",
+  "titulo": "Execução ou correção de vergas e contravergas",
+  "quando_utilizar": [
+    "Fissuras diagonais em portas e janelas",
+    "Ausência de reforço estrutural em vãos"
+  ],
+  "procedimentos_variacoes": [
+    {
+      "descricao_tecnica": "Execução de verga e contraverga em concreto armado conforme boas práticas.",
+      "traducao_pratica": "Fazer uma viga de concreto acima e abaixo da janela para evitar trinca.",
+      "nivel_intervencao": "medio"
+    }
+  ],
+  "referencias_normativas": [
+    {
+      "codigo": "NBR 6118",
+      "descricao": "Projeto de estruturas de concreto"
+    }
+  ]
+}

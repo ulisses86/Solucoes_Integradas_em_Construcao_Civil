@@ -1,0 +1,96 @@
+{
+  "id_num": 1,
+  "id": "fissura_horizontal_encunhamento",
+  "titulo": "Fissura por falha de encunhamento",
+  "categoria": "Alvenaria e Vedação",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "medio",
+  "diagnostico": {
+    "frases": [
+      "Foram identificadas fissuras horizontais localizadas na interface entre a última fiada de alvenaria e o elemento estrutural superior.",
+      "Observou-se a presença de fissura contínua junto ao encontro da parede de vedação com a viga, característica de falha ou ausência de encunhamento adequado."
+    ],
+    "manifestacoes_comuns": [
+      "abertura linear contínua",
+      "desprendimento localizado do revestimento",
+      "fissura visível após pintura ou reboco"
+    ],
+    "causas_provaveis": [
+      "ausência ou execução inadequada do encunhamento da alvenaria",
+      "movimentação diferencial entre estrutura e vedação",
+      "retração da argamassa de assentamento ou do revestimento"
+    ],
+    "riscos_associados": [
+      "evolução da fissura ao longo do tempo",
+      "perda de desempenho estético e de vedação",
+      "facilidade de ingresso de umidade superficial"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "Recomenda-se a correção da interface entre a alvenaria e o elemento estrutural.",
+      "Indica-se a adequação do encunhamento da parede, visando melhor acomodação entre os elementos."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Execução de encunhamento adequado com material deformável ou argamassa apropriada, conforme boas práticas construtivas.",
+          "Realização do encunhamento da alvenaria junto ao elemento estrutural, utilizando material que permita acomodação das movimentações.",
+          "Correção do encunhamento da parede, empregando material compatível que evite a transferência de esforços para a alvenaria."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "A solução deve permitir a absorção de pequenas movimentações sem transmissão de tensões à alvenaria (\"ou seja, usar um material que acompanhe a movimentação da viga sem trincar a parede\").",
+          "O encunhamento deve permitir acomodação entre a viga e a parede, evitando o reaparecimento da fissura (\"não pode ser um material rígido que trave a parede\")."
+        ],
+        "tags": ["encunhamento", "material_deformavel", "alvenaria"]
+      },
+      {
+        "descricao_variacoes": [
+          "Tratamento da fissura com abertura controlada, aplicação de selante flexível e recomposição do revestimento.",
+          "Correção superficial da fissura mediante limpeza, aplicação de material flexível e posterior acabamento."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicado apenas quando não há indícios de movimentação ativa ou evolução da fissura (\"quando a trinca está parada\").",
+          "Essa solução é adequada para fissuras estabilizadas, sem abertura progressiva (\"serve quando a trinca não continua abrindo\")."
+        ],
+        "tags": ["tratamento_superficial", "selante_flexivel"]
+      },
+      {
+        "descricao_variacoes": [
+          "Reexecução parcial do trecho superior da alvenaria com encunhamento correto.",
+          "Demolição localizada e reexecução do topo da alvenaria, garantindo encunhamento adequado."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "Recomendado em casos de fissuras recorrentes ou de maior abertura (\"quando o reparo já foi feito e a trinca volta\").",
+          "Aplicável quando as soluções superficiais não apresentam resultado satisfatório."
+        ],
+        "tags": ["reexecucao_alvenaria", "intervencao_localizada"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 15961",
+        "descricao": "Alvenaria – Execução e controle de obras"
+      },
+      {
+        "codigo": "ABNT NBR 15575",
+        "descricao": "Edificações habitacionais – Desempenho (diretrizes gerais)"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados ensaios destrutivos nem monitoramento contínuo das fissuras"
+  ],
+  "observacoes_tecnicas": [
+    "A correção apenas estética não elimina a causa da fissura, podendo ocorrer reaparecimento.",
+    "Recomenda-se acompanhamento visual após a execução do serviço."
+  ],
+  "nota_responsabilidade": [
+    "As recomendações apresentadas baseiam-se em observação visual e boas práticas da construção civil.",
+    "A definição do método executivo definitivo deve ser realizada pelo profissional responsável pela obra."
+  ]
+}

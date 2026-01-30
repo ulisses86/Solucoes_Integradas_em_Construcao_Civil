@@ -1,0 +1,79 @@
+{
+  "id_num": 10,
+  "id": "mofo_bolor_condensacao",
+  "titulo": "Proliferação de mofo e bolor por condensação",
+  "categoria": "Pintura e Acabamento",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "baixo",
+  "diagnostico": {
+    "frases": [
+      "Foi identificada a presença de mofo e bolor em superfícies internas, associada a ambientes com elevada umidade e ventilação insuficiente.",
+      "Manifestação caracterizada por manchas escuras e odor característico, típica de condensação superficial."
+    ],
+    "manifestacoes_comuns": [
+      "Manchas pretas, esverdeadas ou acinzentadas nas paredes e tetos",
+      "Odor desagradável no ambiente",
+      "Maior incidência em cantos, atrás de móveis ou em áreas pouco ventiladas"
+    ],
+    "causas_provaveis": [
+      "Condensação do vapor d’água em superfícies frias",
+      "Ventilação natural ou mecânica insuficiente",
+      "Alta umidade relativa do ar no ambiente"
+    ],
+    "riscos_associados": [
+      "Comprometimento da qualidade do ar interno",
+      "Desconforto aos ocupantes",
+      "Deterioração progressiva da pintura e do revestimento"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A correção deve priorizar a redução da umidade e a melhoria da ventilação do ambiente.",
+      "Recomenda-se tratar tanto a manifestação visível quanto suas causas."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Limpeza das áreas afetadas com produto adequado para remoção de fungos, seguida de repintura com tinta antimofo.",
+          "Tratamento das superfícies com produto fungicida e posterior aplicação de tinta com propriedades antimofo."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "A limpeza deve ser realizada com a superfície seca (\"não é só passar pano, tem que matar o mofo\").",
+          "O uso de tinta antimofo ajuda a retardar o reaparecimento da manifestação."
+        ],
+        "tags": ["mofo", "bolor", "limpeza", "pintura"]
+      },
+      {
+        "descricao_variacoes": [
+          "Melhoria da ventilação natural ou instalação de ventilação mecânica no ambiente.",
+          "Adequação do uso do ambiente para reduzir a concentração de umidade."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Ambientes fechados favorecem o surgimento do mofo (\"quanto menos vento, mais mofo aparece\").",
+          "A ventilação é essencial para evitar a reincidência do problema."
+        ],
+        "tags": ["ventilacao", "condensacao", "controle_umidade"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 15575",
+        "descricao": "Edificações habitacionais – Desempenho (requisitos de salubridade)"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizadas medições de umidade relativa do ar"
+  ],
+  "observacoes_tecnicas": [
+    "A recorrência do mofo indica falha no controle da umidade do ambiente.",
+    "Apenas a pintura não resolve o problema se a ventilação permanecer inadequada."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não constitui parecer pericial nem avaliação de salubridade completa.",
+    "As recomendações baseiam-se em observação visual e boas práticas construtivas."
+  ]
+}

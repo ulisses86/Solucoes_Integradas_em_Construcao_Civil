@@ -1,0 +1,83 @@
+{
+  "id_num": 5,
+  "id": "infiltracao_laje_cobertura",
+  "titulo": "Infiltração em laje de cobertura",
+  "categoria": "Impermeabilização e Umidade",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "medio",
+  "diagnostico": {
+    "frases": [
+      "Foram identificadas manchas de umidade no teto do pavimento inferior, compatíveis com infiltração proveniente da laje de cobertura.",
+      "Observa-se presença de umidade recorrente associada a falhas no sistema de impermeabilização da laje."
+    ],
+    "manifestacoes_comuns": [
+      "Manchas escuras ou amareladas no teto",
+      "Descascamento de pintura ou reboco",
+      "Gotejamento em períodos de chuva intensa"
+    ],
+    "causas_provaveis": [
+      "Falha ou ausência de sistema de impermeabilização na laje",
+      "Fissuras na laje de concreto",
+      "Deficiência no caimento ou na drenagem da cobertura"
+    ],
+    "riscos_associados": [
+      "Danos progressivos ao revestimento interno",
+      "Comprometimento do conforto e salubridade do ambiente",
+      "Possível corrosão das armaduras em casos prolongados"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A correção deve priorizar a eliminação da origem da infiltração na face superior da laje.",
+      "Recomenda-se avaliação completa da impermeabilização existente antes da definição da solução."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Execução de novo sistema de impermeabilização na laje de cobertura, após regularização e preparo da superfície.",
+          "Reimpermeabilização da laje com sistema adequado ao uso da área, garantindo continuidade e estanqueidade."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "A impermeabilização deve ser contínua e bem arrematada nos ralos e encontros com paredes (\"não pode deixar emenda mal feita\").",
+          "Antes da aplicação, a laje deve estar limpa e sem fissuras ativas (\"não adianta impermeabilizar em cima de trinca aberta\")."
+        ],
+        "tags": ["impermeabilizacao", "laje", "cobertura"]
+      },
+      {
+        "descricao_variacoes": [
+          "Tratamento localizado de fissuras com selante flexível e posterior aplicação de pintura impermeabilizante.",
+          "Correção pontual das fissuras e aplicação de revestimento impermeável superficial."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicada apenas para infiltrações leves e pontuais (\"quando o problema é pequeno e bem localizado\").",
+          "Soluções superficiais exigem manutenção periódica."
+        ],
+        "tags": ["tratamento_superficial", "selante", "pintura_impermeavel"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 9575",
+        "descricao": "Impermeabilização – Seleção e projeto"
+      },
+      {
+        "codigo": "ABNT NBR 9574",
+        "descricao": "Execução de impermeabilização – Procedimento"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados testes de estanqueidade"
+  ],
+  "observacoes_tecnicas": [
+    "A correção apenas pelo lado interno não elimina a causa da infiltração.",
+    "Recomenda-se verificar periodicamente o estado da impermeabilização."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não substitui projeto específico de impermeabilização.",
+    "As recomendações baseiam-se em boas práticas construtivas e observação visual."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "pintura_preparo_base",
+  "titulo": "Correção de superfície e repintura",
+  "quando_utilizar": [
+    "Descascamento de pintura",
+    "Bolhas, mofo ou falha de aderência"
+  ],
+  "procedimentos_variacoes": [
+    {
+      "descricao_tecnica": "Remoção mecânica da pintura solta, tratamento da base e reaplicação do sistema de pintura.",
+      "traducao_pratica": "Raspar a tinta velha, tratar o local e pintar novamente.",
+      "nivel_intervencao": "simples"
+    },
+    {
+      "descricao_tecnica": "Aplicação de fundo preparador ou selador acrílico antes da pintura final.",
+      "traducao_pratica": "Passar selador para a tinta fixar melhor e durar mais.",
+      "nivel_intervencao": "simples"
+    }
+  ],
+  "observacoes": [
+    "Corrigir a origem da umidade antes da pintura",
+    "Seguir orientação do fabricante da tinta"
+  ]
+}

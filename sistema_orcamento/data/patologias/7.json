@@ -1,0 +1,83 @@
+{
+  "id_num": 7,
+  "id": "desplacamento_revestimento_ceramico",
+  "titulo": "Desplacamento de revestimento cerâmico",
+  "categoria": "Revestimentos e Pisos",
+  "aplicacao": ["residencial", "comercial"],
+  "nivel_complexidade": "medio",
+  "diagnostico": {
+    "frases": [
+      "Foi identificado desplacamento parcial de revestimento cerâmico, com perda de aderência entre a placa e o substrato.",
+      "Observou-se destacamento de peças cerâmicas, apresentando som cavo e risco de desprendimento."
+    ],
+    "manifestacoes_comuns": [
+      "Peças soltas ou destacadas da base",
+      "Som cavo ao percutir o revestimento",
+      "Trincas ou queda parcial de placas"
+    ],
+    "causas_provaveis": [
+      "Aplicação inadequada da argamassa colante",
+      "Substrato sujo, pulverulento ou sem preparo adequado",
+      "Ausência de juntas de movimentação ou assentamento incorreto"
+    ],
+    "riscos_associados": [
+      "Risco de queda de peças, podendo causar acidentes",
+      "Comprometimento do acabamento e da durabilidade do revestimento",
+      "Evolução do desplacamento para áreas adjacentes"
+    ]
+  },
+  "recomendacoes_tecnicas": {
+    "frases_base": [
+      "A correção deve prever a remoção das peças soltas e o preparo adequado da base.",
+      "Recomenda-se avaliar a extensão do desplacamento antes da definição do reparo."
+    ],
+    "solucoes_possiveis": [
+      {
+        "descricao_variacoes": [
+          "Remoção das peças soltas, limpeza do substrato e reassentamento com argamassa colante adequada.",
+          "Retirada do revestimento comprometido, preparo da base e novo assentamento cerâmico conforme boas práticas."
+        ],
+        "nivel_intervencao": "moderada",
+        "observacoes_variacoes": [
+          "A base deve estar limpa, firme e regular antes do novo assentamento (\"não pode colar cerâmica em parede suja ou esfarelando\").",
+          "É importante utilizar argamassa adequada ao tipo de ambiente e revestimento."
+        ],
+        "tags": ["revestimento_ceramico", "argamassa_colante", "reassentamento"]
+      },
+      {
+        "descricao_variacoes": [
+          "Substituição pontual das peças soltas, quando o desplacamento for localizado.",
+          "Reparo localizado com troca apenas das placas comprometidas."
+        ],
+        "nivel_intervencao": "simples",
+        "observacoes_variacoes": [
+          "Indicada quando o problema é restrito a poucas peças (\"quando só algumas cerâmicas estão soltas\").",
+          "Deve-se verificar se não há som cavo em áreas próximas."
+        ],
+        "tags": ["reparo_local", "troca_de_placas"]
+      }
+    ],
+    "referencias_normativas": [
+      {
+        "codigo": "ABNT NBR 13755",
+        "descricao": "Revestimento de paredes externas com placas cerâmicas – Procedimento"
+      },
+      {
+        "codigo": "ABNT NBR 14081",
+        "descricao": "Argamassa colante industrializada – Requisitos"
+      }
+    ]
+  },
+  "limitacoes_da_analise": [
+    "Análise baseada em inspeção predominantemente visual",
+    "Não foram realizados ensaios de aderência"
+  ],
+  "observacoes_tecnicas": [
+    "O som cavo é indicativo de falha de aderência.",
+    "A manutenção preventiva pode evitar a progressão do desplacamento."
+  ],
+  "nota_responsabilidade": [
+    "Este laudo não substitui projeto executivo de revestimento.",
+    "As recomendações baseiam-se em boas práticas construtivas e observação visual."
+  ]
+}
