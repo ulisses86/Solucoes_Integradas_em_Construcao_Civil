@@ -1,0 +1,27 @@
+{
+  "id": "materiais_tratamento_fissuras",
+  "categoria": "Alvenaria e Vedação",
+  "itens": [
+    {
+      "nome": "Selador acrílico flexível",
+      "uso_tecnico": "Preenchimento de fissuras superficiais e juntas de pequena movimentação",
+      "uso_pratico": "Fechar trincas finas para evitar entrada de água",
+      "alternativas": ["massa acrílica flexível", "selante elastomérico"],
+      "observacoes": "Indicado apenas para fissuras estáveis e de pequena abertura"
+    },
+    {
+      "nome": "Tela de fibra de vidro",
+      "uso_tecnico": "Reforço localizado em áreas fissuradas",
+      "uso_pratico": "Evita que a trinca volte após o reparo",
+      "alternativas": ["tela poliéster"],
+      "observacoes": "Deve ser aplicada embutida na argamassa ou massa"
+    },
+    {
+      "nome": "Argamassa de reparo",
+      "uso_tecnico": "Regularização e recomposição do revestimento",
+      "uso_pratico": "Nivelar e corrigir a parede após o tratamento",
+      "alternativas": ["argamassa polimérica"],
+      "observacoes": "Respeitar tempo de cura antes da pintura"
+    }
+  ]
+}

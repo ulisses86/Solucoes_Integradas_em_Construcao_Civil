@@ -1,0 +1,33 @@
+{
+  "id": "materiais_pintura",
+  "categoria": "Pintura e acabamento",
+  "itens": [
+    {
+      "nome": "Selador acrílico",
+      "uso_tecnico": "Preparação de superfícies porosas",
+      "uso_pratico": "Ajudar a tinta a fixar melhor",
+      "alternativas": [
+        "fundo preparador"
+      ],
+      "observacoes": "Aplicar antes da pintura final"
+    },
+    {
+      "nome": "Tinta acrílica",
+      "uso_tecnico": "Proteção e acabamento de superfícies internas e externas",
+      "uso_pratico": "Pintar paredes e fachadas",
+      "alternativas": [
+        "tinta látex PVA (ambiente interno)"
+      ],
+      "observacoes": "Escolher tinta adequada para área interna ou externa"
+    },
+    {
+      "nome": "Removedor de mofo e fungos",
+      "uso_tecnico": "Tratamento prévio de superfícies contaminadas",
+      "uso_pratico": "Eliminar mofo antes da pintura",
+      "alternativas": [
+        "solução fungicida"
+      ],
+      "observacoes": "Usar EPI durante a aplicação"
+    }
+  ]
+}

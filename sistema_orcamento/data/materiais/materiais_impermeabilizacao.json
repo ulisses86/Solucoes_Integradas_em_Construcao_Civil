@@ -1,0 +1,32 @@
+{
+  "id": "materiais_impermeabilizacao",
+  "categoria": "Impermeabilização",
+  "itens": [
+    {
+      "nome": "Membrana impermeabilizante líquida",
+      "uso_tecnico": "Impermeabilização flexível de lajes e áreas expostas",
+      "uso_pratico": "Criar uma camada impermeável tipo borracha líquida",
+      "alternativas": [
+        "manta líquida acrílica",
+        "membrana elastomérica"
+      ],
+      "observacoes": "Aplicar em demãos cruzadas conforme fabricante"
+    },
+    {
+      "nome": "Manta asfáltica",
+      "uso_tecnico": "Impermeabilização contínua de lajes e coberturas",
+      "uso_pratico": "Impedir infiltração de água na laje",
+      "alternativas": [
+        "manta asfáltica autoadesiva"
+      ],
+      "observacoes": "Exige mão de obra qualificada"
+    },
+    {
+      "nome": "Primer asfáltico",
+      "uso_tecnico": "Preparação da base para manta asfáltica",
+      "uso_pratico": "Garantir aderência da manta na laje",
+      "alternativas": [],
+      "observacoes": "Aplicar sobre base limpa e seca"
+    }
+  ]
+}

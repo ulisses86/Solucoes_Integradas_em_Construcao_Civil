@@ -1,0 +1,34 @@
+{
+  "id": "materiais_revestimentos_contrapiso",
+  "categoria": "Revestimentos e contrapiso",
+  "itens": [
+    {
+      "nome": "Argamassa colante",
+      "uso_tecnico": "Assentamento de revestimentos cerâmicos",
+      "uso_pratico": "Colar piso ou azulejo",
+      "alternativas": [
+        "argamassa AC-II",
+        "argamassa AC-III"
+      ],
+      "observacoes": "Escolher tipo conforme área interna ou externa"
+    },
+    {
+      "nome": "Rejunte cimentício",
+      "uso_tecnico": "Vedação entre placas cerâmicas",
+      "uso_pratico": "Fechar juntas do piso ou azulejo",
+      "alternativas": [
+        "rejunte acrílico"
+      ],
+      "observacoes": "Evitar aplicação com base úmida"
+    },
+    {
+      "nome": "Argamassa de regularização",
+      "uso_tecnico": "Correção de desníveis em contrapiso",
+      "uso_pratico": "Nivelar o piso antes do revestimento",
+      "alternativas": [
+        "argamassa autonivelante"
+      ],
+      "observacoes": "Verificar prumo e nível antes do assentamento"
+    }
+  ]
+}
